@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>JOJUHYUN</title>
+    <style>
+      html {
+        background-color: white;
+      }
+      body {
+        height: 100vh;
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+      div {
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 900px;
+        height: 50px;
+        font-size: 20px;
+        font-style: italic;
+        color: white;
+      }
+      #top {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 25px;
+        background-color: white;
+        border: 2px solid rgb(174, 206, 234);
+        color: rgb(174, 206, 234);
+      }
+
+      #main {
+        display: flex;
+        align-items: center;
+        min-width: 900px;
+        min-height: 300px;
+        background-color: rgb(174, 206, 234);
+        color: rgb(255, 255, 255);
+      }
+
+      #main .text1,
+      #main .text2 {
+        position: absolute;
+        transition: opacity 0.5s ease;
+      }
+
+      #main .text2 {
+        width: 600px;
+        opacity: 0; /*설명글 X*/
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      #main:hover .text1 {
+        opacity: 0;
+      }
+      #main:hover .text2 {
+        opacity: 1; /* 설명글 O */
+      }
+      #main .text2 .text3 {
+        margin-right: 20px; /* 이미지와 텍스트 사이 간격  */
+      }
+      #main .text2 .text4 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #main .text2 .text3 img {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+      }
+
+      #main .text2 .text4 h5 {
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="top">JOJUHYUN</div>
+    <div id="main">
+      <div class="text1"><p>안녕하세요!</p></div>
+      <div class="text2">
+        <div class="text3">
+          <img src="img/cheeseball.jpg" />
+        </div>
+        <div class="text4">
+          <h5><p>성신여자대학교</p></h5>
+          <h5><p>컴퓨터공학과 24학번</p></h5>
+          <h5><p>조주현입니다!</p></h5>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
